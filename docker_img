@@ -13,3 +13,5 @@ docker run -d --name web5_container -p 80:80  web5
 docker login -u prathamesh05 
 docker  tag web5  prathamesh05/web5
 docker push prathamesh05/web5
+docker swarm init
+docker service create --name web5_service --replicas 3 -p 80:80 prathamesh05/web5
