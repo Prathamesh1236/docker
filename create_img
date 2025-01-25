@@ -9,4 +9,4 @@ echo -e 'FROM ubuntu/apache2\nCOPY . /var/www/html/'>Dockerfile
 sudo usermod -aG docker ${USER}
 sudo chmod 777 /var/run/docker.sock
 docker build -t web5 .
-rm create_img
+
