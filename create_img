@@ -9,4 +9,7 @@ echo -e 'FROM ubuntu/apache2\nCOPY . /var/www/html/'>Dockerfile
 sudo usermod -aG docker ${USER}
 sudo chmod 777 /var/run/docker.sock
 docker build -t web5 .
-
+docker run -d --name web5_container -p 80:80  web5
+docker login -u prathamesh05 
+docker  tag web5  prathamesh05/web5
+docker push prathamesh05/web5
