@@ -1,0 +1,10 @@
+sudo apt update
+sudo apt install git -y
+sudo apt install docker.io -y
+mkdir exam
+cd exam
+echo '<h1> lets goo </h1>'>index.html
+echo -e 'FROM ubuntu/apache2\nCOPY . /var/www/html/'>Dockerfile
+sudo usermod -aG docker ${USER}
+sudo chmod 777 /var/run/docker.sock
+docker build -t web5 .
